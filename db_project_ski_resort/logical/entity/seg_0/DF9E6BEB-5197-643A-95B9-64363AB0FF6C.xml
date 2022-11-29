@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DF9E6BEB-5197-643A-95B9-64363AB0FF6C" name="Slopes">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:52:05 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="slop_name" id="D754E8D3-0745-2211-14D9-0F5C5BA8BE54">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:52:21 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lenght" id="2E95B80A-329A-222C-069F-CAB7EA7F2FD1">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:52:45 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="difficulty_level" id="66EBCD97-FBA4-0988-AAAF-AF1D5B8FAF57">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:53:11 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BB36F331-C37E-3366-A44F-AEF2133C4465" name="Key_1">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:54:04 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>D754E8D3-0745-2211-14D9-0F5C5BA8BE54</newElementsIDs>
+<usedAttributes>
+<attributeRef>D754E8D3-0745-2211-14D9-0F5C5BA8BE54</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

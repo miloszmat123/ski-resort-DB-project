@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA081AF4-7679-80E0-72B0-333097BB6EF7" name="Rentals">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:37:58 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="start_date" id="6E0D4277-F50A-7B6F-8B73-E53235F5BC9A">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:38:32 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date" id="802107E7-2A8E-3494-F810-F65D97767B3E">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:38:51 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="duration" id="7B86487C-28BC-625A-5572-F033E561AEED">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:39:07 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="client_id" id="DA15F5AD-5355-DA06-EAC1-32841B265FB9">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:40:46 UTC</createdTime>
+<generatorID>1EB99E63-7C9B-3F35-0C6A-AB557B382FA7</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>24C1A257-87B5-E3A7-64E1-66507AE6A972</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="eq_id" id="BDF4034D-9B97-106E-EC69-152F31D44482">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:40:59 UTC</createdTime>
+<generatorID>C084E61D-4C42-7E3A-9861-67DCAA14D569</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>DBC9BA38-451C-B2F6-29AB-09E7B8C05889</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9DDAB819-2AF6-6627-A63F-F570FCB1D8C1" name="Key_1">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:39:50 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C084E61D-4C42-7E3A-9861-67DCAA14D569,1EB99E63-7C9B-3F35-0C6A-AB557B382FA7,6E0D4277-F50A-7B6F-8B73-E53235F5BC9A</newElementsIDs>
+<usedAttributes>
+<attributeRef>BDF4034D-9B97-106E-EC69-152F31D44482</attributeRef>
+<attributeRef>DA15F5AD-5355-DA06-EAC1-32841B265FB9</attributeRef>
+<attributeRef>6E0D4277-F50A-7B6F-8B73-E53235F5BC9A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

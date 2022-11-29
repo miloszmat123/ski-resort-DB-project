@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AD9A55FB-E763-EDB4-BF99-085328E7245A" name="Lessons">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:01:06 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="date" id="193EB022-5FE2-F5E7-149F-483F9B441132">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:01:19 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="869E2FE3-C380-1E0F-2C84-A9E6B49DC4CC">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:01:59 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="instructor_id" id="D98F4A18-F455-11D7-676B-0FBBF9324DFD">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:08:07 UTC</createdTime>
+<generatorID>8A8917FF-6A3C-3C2C-AF1D-7D6B517CE83C</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>FEA35ECE-8CE1-9159-34A6-94F31FDA2345</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="client_id" id="390A0913-9511-9F8A-317D-46E0549F1AB3">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:08:12 UTC</createdTime>
+<generatorID>D7D604F6-86E0-8197-9BA1-BE60CD13DA8D</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>24C1A257-87B5-E3A7-64E1-66507AE6A972</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="77B28752-6D2A-83F4-9437-B65D72C68A85" name="Lessons PK">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:07:56 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>193EB022-5FE2-F5E7-149F-483F9B441132,8A8917FF-6A3C-3C2C-AF1D-7D6B517CE83C,D7D604F6-86E0-8197-9BA1-BE60CD13DA8D</newElementsIDs>
+<usedAttributes>
+<attributeRef>193EB022-5FE2-F5E7-149F-483F9B441132</attributeRef>
+<attributeRef>D98F4A18-F455-11D7-676B-0FBBF9324DFD</attributeRef>
+<attributeRef>390A0913-9511-9F8A-317D-46E0549F1AB3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

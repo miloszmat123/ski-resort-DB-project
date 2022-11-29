@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C33641F1-FC2F-3E90-4A24-ED09D6589DFA" name="Bought-passes">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:08:37 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="start-datetime" id="3A4983E1-21A5-5885-9A1D-C07A8960281A">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:09:38 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end-datetime" id="CD854366-6E01-2586-8626-5F4D7C943870">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:11:31 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="client_id" id="E0A52FA7-11A0-C2BD-E5F6-07D2DE23877E">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:26:47 UTC</createdTime>
+<generatorID>92573CAF-B487-FC85-A9D6-551D3C4AE6A7</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>24C1A257-87B5-E3A7-64E1-66507AE6A972</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pass_id" id="FDCDCFC4-D20D-E719-E56A-657A428FCFFB">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:26:54 UTC</createdTime>
+<generatorID>242EC095-C85A-F895-FAD3-760DEA24B6D3</generatorID>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<referedAttribute>778C25FB-D68F-094F-D947-FAB663C9D434</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F6210F2D-B97A-0288-F77B-FADA4890CD71" name="Bought-passes PK">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 16:26:47 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>92573CAF-B487-FC85-A9D6-551D3C4AE6A7,242EC095-C85A-F895-FAD3-760DEA24B6D3,3A4983E1-21A5-5885-9A1D-C07A8960281A</newElementsIDs>
+<usedAttributes>
+<attributeRef>E0A52FA7-11A0-C2BD-E5F6-07D2DE23877E</attributeRef>
+<attributeRef>FDCDCFC4-D20D-E719-E56A-657A428FCFFB</attributeRef>
+<attributeRef>3A4983E1-21A5-5885-9A1D-C07A8960281A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

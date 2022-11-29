@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_13" directorySegmentName="seg_0" id="6CD9B8A8-B3C2-4F71-D6CC-F2AE25DAE41A">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 17:02:49 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>zones</nameOnSource>
+<nameOnTarget>pass_applies</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1824BF55-49C9-3868-DE0E-B098E5B0C6F5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>079F606C-A272-0A6F-6C40-95B6AE0110C0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

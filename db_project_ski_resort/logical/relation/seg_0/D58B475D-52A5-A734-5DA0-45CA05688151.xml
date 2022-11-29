@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_2" directorySegmentName="seg_0" id="D58B475D-52A5-A734-5DA0-45CA05688151">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:57:47 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<engineerTo>
+<item key="FF3E0E65-FE56-93F7-4FE3-0F5FF058DE4B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>slopes</nameOnSource>
+<nameOnTarget>lifts</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>DF9E6BEB-5197-643A-95B9-64363AB0FF6C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EB08D232-993A-295F-4E6E-3CA57FD68AC4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

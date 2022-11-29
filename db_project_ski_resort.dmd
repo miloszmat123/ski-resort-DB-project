@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="db_project_ski_resort" id="EAD0E660-1ED9-9DA8-89FB-E5BB08B3F285" version="3.5">
+<createdBy>user</createdBy>
+<createdTime>2022-11-24 15:45:20 UTC</createdTime>
+<ownerDesignName>db_project_ski_resort</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>EAD0E660-1ED9-9DA8-89FB-E5BB08B3F285</designId>
+</OSDM_Design>
