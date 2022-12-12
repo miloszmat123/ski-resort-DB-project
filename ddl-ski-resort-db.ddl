@@ -14,7 +14,7 @@ DROP TABLE slopes CASCADE CONSTRAINTS;
 DROP TABLE zones CASCADE CONSTRAINTS;
 
 CREATE TABLE bought_passes (
-    start_datetime DATE NOT NULL,
+    start_datetime TIMESTAMP NOT NULL,
     end_datetime   DATE NOT NULL,
     client_id      NUMBER(6) NOT NULL,
     pass_id        NUMBER NOT NULL
@@ -189,15 +189,15 @@ BEGIN
 /   
 
 CREATE OR REPLACE FUNCTION day_summary
-    (pData IN DATE )
+    (pDate IN DATE )
     RETURN NATURAL IS
-    vsummary NATURAL;
+    vSummary NATURAL;
 BEGIN 
-    SELECT SUM(p.price) into vsummary
+    SELECT SUM(p.price) into vSummary
     FROM passes p JOIN bought_passes b USING (pass_id)
-    WHERE pData = b.start_datetime;
+    WHERE pDate = TRUNC(b.start_datetime);
 
-    RETURN vsummary;
+    RETURN vSummary;
 END;
 /
 
