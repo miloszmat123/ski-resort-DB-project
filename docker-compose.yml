@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  oracle:
+    image: gvenzl/oracle-xe:latest
+    container_name: oracle_db
+    environment:
+      ORACLE_RANDOM_PASSWORD: true
+      APP_USER: my_user
+      APP_USER_PASSWORD: password
+    ports:
+      - 1521:1521
