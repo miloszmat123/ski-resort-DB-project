@@ -15,7 +15,7 @@ DROP TABLE zones CASCADE CONSTRAINTS;
 
 CREATE TABLE bought_passes (
     start_datetime TIMESTAMP NOT NULL,
-    end_datetime   DATE NOT NULL,
+    end_datetime   TIMESTAMP NOT NULL,
     client_id      NUMBER(6) NOT NULL,
     pass_id        NUMBER NOT NULL
 );
@@ -42,7 +42,7 @@ CREATE TABLE instructors (
 ALTER TABLE instructors ADD CONSTRAINT instructors_pk PRIMARY KEY ( instructor_id );
 
 CREATE TABLE lessons (
-    lesson_date   DATE NOT NULL,
+    lesson_date   TIMESTAMP NOT NULL,
     price         NUMBER(4, 2) NOT NULL,
     instructor_id NUMBER(6) NOT NULL,
     client_id     NUMBER(6) NOT NULL
@@ -88,8 +88,8 @@ CREATE TABLE rental_equipment_type (
 ALTER TABLE rental_equipment_type ADD CONSTRAINT rental_equipment_type_pk PRIMARY KEY ( name );
 
 CREATE TABLE rentals (
-    start_date DATE NOT NULL,
-    end_date   DATE NOT NULL,
+    start_date TIMESTAMP NOT NULL,
+    end_date   TIMESTAMP NOT NULL,
     duration   NUMBER(4) NOT NULL,
     client_id  NUMBER(6) NOT NULL,
     eq_id      NUMBER(5) NOT NULL
