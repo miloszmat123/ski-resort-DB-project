@@ -177,30 +177,33 @@ ALTER TABLE zones_passes
     ADD CONSTRAINT zones_passes_zones_fk FOREIGN KEY ( zone_id )
         REFERENCES zones ( zone_id );
 
-CREATE OR REPLACE PROCEDURE price_raise 
+CREATE OR REPLACE PROCEDURE price_raise
     (pPassId IN NUMBER, pPercent IN NUMBER DEFAULT 10) IS
 BEGIN
     UPDATE Passes
     SET price = price *(1+pPercent/100)
     WHERE pass_id = pPassId;
  END;
-/   
 
 CREATE OR REPLACE FUNCTION day_summary
     (pDate IN DATE )
     RETURN NATURAL IS
     vSummary NATURAL;
-BEGIN 
+BEGIN
     SELECT SUM(p.price) into vSummary
     FROM passes p JOIN bought_passes b USING (pass_id)
     WHERE pDate = TRUNC(b.start_datetime);
 
     RETURN vSummary;
 END;
-/
 
-
-
-INSERT INTO passes(duration, time_unit, price, type_of_discount) VALUES(2, 'dzien', 100, 'ulgowy - 50%');
-/
-
+CREATE INDEX client_surname_name_idx ON clients(surname, name);
+CREATE INDEX rentals_client_id_idx ON rentals(client_id);
+CREATE INDEX rentals_eq_id_idx ON rentals(eq_id);
+CREATE INDEX lessons_client_id_idx ON lessons(client_id);
+CREATE INDEX lessons_instructor_id_idx ON lessons(instructor_id);
+CREATE INDEX bought_passes_client_id_idx ON bought_passes(client_id);
+CREATE INDEX bought_passes_pass_id_idx ON bought_passes(pass_id);
+CREATE INDEX rental_equipment_rental_equipment_type_name_idx ON rental_equipment(rental_equipment_type_name);
+CREATE INDEX lifts_zone_id_idx ON lifts(zone_id);
+CREATE INDEX instructors_surname_name_idx ON instructors(surname, name);
