@@ -51,7 +51,7 @@ ALTER TABLE lessons_type
 
 CREATE TABLE lessons (
     lesson_date   TIMESTAMP NOT NULL,
-    lesson_type   VARCHAR2(50),
+    lesson_type   VARCHAR2(50) NOT NULL,
     instructor_id NUMBER(6) NOT NULL,
     client_id     NUMBER(6) NOT NULL
 );
