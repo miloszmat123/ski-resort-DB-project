@@ -41,9 +41,17 @@ CREATE TABLE instructors (
 
 ALTER TABLE instructors ADD CONSTRAINT instructors_pk PRIMARY KEY ( instructor_id );
 
+CREATE TABLE lessons_type(
+    lesson_type   VARCHAR2(50),
+    price         NUMBER(5,2)
+);
+
+ALTER TABLE lessons_type
+    add CONSTRAINT lessons_type_pk PRIMARY KEY(lesson_type);
+
 CREATE TABLE lessons (
     lesson_date   TIMESTAMP NOT NULL,
-    price         NUMBER(4, 2) NOT NULL,
+    lesson_type   VARCHAR2(50),
     instructor_id NUMBER(6) NOT NULL,
     client_id     NUMBER(6) NOT NULL
 );
@@ -158,6 +166,10 @@ ALTER TABLE lessons
 ALTER TABLE lessons
     ADD CONSTRAINT lessons_instructors_fk FOREIGN KEY ( instructor_id )
         REFERENCES instructors ( instructor_id );
+
+ALTER TABLE lessons
+    ADD CONSTRAINT lessons_type_fk FOREIGN KEY (lesson_type)
+        REFERENCES lessons_type ( lesson_type);
 
 ALTER TABLE lifts
     ADD CONSTRAINT lifts_zones_fk FOREIGN KEY ( zone_id )
