@@ -42,8 +42,8 @@ CREATE TABLE instructors (
 ALTER TABLE instructors ADD CONSTRAINT instructors_pk PRIMARY KEY ( instructor_id );
 
 CREATE TABLE lessons_type(
-    lesson_type   VARCHAR2(50),
-    price         NUMBER(5,2)
+    lesson_type   VARCHAR2(50) NOT NULL,
+    price         NUMBER(5,2) NOT NULL
 );
 
 ALTER TABLE lessons_type
