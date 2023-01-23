@@ -1,19 +1,3 @@
-
-DROP TABLE bought_passes CASCADE CONSTRAINTS;
-DROP TABLE clients CASCADE CONSTRAINTS;
-DROP TABLE instructors CASCADE CONSTRAINTS;
-DROP TABLE lessons CASCADE CONSTRAINTS;
-DROP TABLE lifts CASCADE CONSTRAINTS;
-DROP TABLE passes CASCADE CONSTRAINTS;
-DROP TABLE zones_passes CASCADE CONSTRAINTS;
-DROP TABLE slopes_lifts CASCADE CONSTRAINTS;
-DROP TABLE rental_equipment CASCADE CONSTRAINTS;
-DROP TABLE rental_equipment_type CASCADE CONSTRAINTS;
-DROP TABLE rentals CASCADE CONSTRAINTS;
-DROP TABLE slopes CASCADE CONSTRAINTS;
-DROP TABLE zones CASCADE CONSTRAINTS;
-DROP TABLE discount_types CASCADE CONSTRAINTS;
-
 CREATE TABLE bought_passes (
     start_datetime TIMESTAMP NOT NULL,
     client_id      NUMBER(6) NOT NULL,
@@ -149,11 +133,13 @@ ALTER TABLE zones_passes ADD CONSTRAINT zones_passes_pk PRIMARY KEY ( zone_id,
 
 ALTER TABLE bought_passes
     ADD CONSTRAINT bought_passes_clients_fk FOREIGN KEY ( client_id )
-        REFERENCES clients ( client_id );
+        REFERENCES clients ( client_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE bought_passes
     ADD CONSTRAINT bought_passes_passes_fk FOREIGN KEY ( pass_id )
-        REFERENCES passes ( pass_id );
+        REFERENCES passes ( pass_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE passes
     ADD CONSTRAINT discount_types_passes_fk FOREIGN KEY ( discount_type )
@@ -161,11 +147,13 @@ ALTER TABLE passes
 
 ALTER TABLE lessons
     ADD CONSTRAINT lessons_clients_fk FOREIGN KEY ( client_id )
-        REFERENCES clients ( client_id );
+        REFERENCES clients ( client_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE lessons
     ADD CONSTRAINT lessons_instructors_fk FOREIGN KEY ( instructor_id )
-        REFERENCES instructors ( instructor_id );
+        REFERENCES instructors ( instructor_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE lessons
     ADD CONSTRAINT lessons_type_fk FOREIGN KEY (lesson_type)
@@ -181,27 +169,33 @@ ALTER TABLE rental_equipment
 
 ALTER TABLE rentals
     ADD CONSTRAINT rentals_clients_fk FOREIGN KEY ( client_id )
-        REFERENCES clients ( client_id );
+        REFERENCES clients ( client_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE rentals
     ADD CONSTRAINT rentals_rental_equipment_fk FOREIGN KEY ( eq_id )
-        REFERENCES rental_equipment ( eq_id );
+        REFERENCES rental_equipment ( eq_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE slopes_lifts
     ADD CONSTRAINT slopes_lifts_lifts_fk FOREIGN KEY ( lift_name )
-        REFERENCES lifts ( lift_name );
+        REFERENCES lifts ( lift_name )
+        ON DELETE CASCADE;
 
 ALTER TABLE slopes_lifts
     ADD CONSTRAINT slopes_lifts_slopes_fk FOREIGN KEY ( slop_name )
-        REFERENCES slopes ( slop_name );
+        REFERENCES slopes ( slop_name )
+        ON DELETE CASCADE;
 
 ALTER TABLE zones_passes
     ADD CONSTRAINT zones_passes_passes_fk FOREIGN KEY ( pass_id )
-        REFERENCES passes ( pass_id );
+        REFERENCES passes ( pass_id )
+        ON DELETE CASCADE;
 
 ALTER TABLE zones_passes
     ADD CONSTRAINT zones_passes_zones_fk FOREIGN KEY ( zone_id )
-        REFERENCES zones ( zone_id );
+        REFERENCES zones ( zone_id )
+        ON DELETE CASCADE;
 
 CREATE OR REPLACE PROCEDURE price_raise
     (pPassId IN NUMBER, pPercent IN NUMBER DEFAULT 10) IS
@@ -209,7 +203,8 @@ BEGIN
     UPDATE Passes
     SET price = price *(1+pPercent/100)
     WHERE pass_id = pPassId;
- END;
+END;
+/
 
 CREATE OR REPLACE FUNCTION day_summary
     (pDate IN DATE )
@@ -222,6 +217,7 @@ BEGIN
 
     RETURN vSummary;
 END;
+/
 
 CREATE INDEX client_surname_name_idx ON clients(surname, name);
 CREATE INDEX rentals_client_id_idx ON rentals(client_id);
